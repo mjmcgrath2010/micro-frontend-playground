@@ -1,0 +1,16 @@
+{
+  "name": "micro-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mike McGrath <mike@mikemcgrathonline.us>",
+  "license": "MIT",
+  "scripts": {
+    "container": "cd container && yarn start",
+    "home": "cd homepage && yarn start",
+    "start": "concurrently \"yarn home\" \"yarn container\"",
+    "setup": "yarn && cd container && yarn && cd ../homepage && yarn && cd ../ && yarn start"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
